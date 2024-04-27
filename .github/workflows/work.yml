@@ -1,0 +1,16 @@
+name: GitAction 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  fio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Bash Script
+        run: bash fio.sh
